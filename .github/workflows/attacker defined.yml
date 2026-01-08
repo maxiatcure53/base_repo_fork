@@ -1,4 +1,4 @@
-name: Hello World
+name: attacker defined
 
 on:
   workflow_dispatch:
