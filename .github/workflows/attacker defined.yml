@@ -8,4 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Say Hello
-        run: echo "Hello World"
+        run: | 
+            echo "sha: ${{github.event.pull_request.head.sha}}"
+            echo "github sha ${{github.sha}}"
