@@ -1,0 +1,14 @@
+name: vuln workflow_run
+
+on:
+    workflow_run:
+        workflows:
+            "attacker defined"
+        types:
+            - completed
+
+jobs:
+    firstjob:
+        steps:
+            - name: firststep
+              run: echo "testing"
