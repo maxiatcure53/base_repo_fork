@@ -1,0 +1,12 @@
+name: attacker defined
+
+on: pull_request
+
+
+jobs:
+  hello-from-attacker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: hello
+        run: |
+          echo "hewo"
