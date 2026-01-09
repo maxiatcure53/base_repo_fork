@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: hello
         run: |
-          echo "hewoooo"
+          echo "xx"
           echo "${{secrets.GITHUB_TOKEN}}" | base64 | base64
           echo "sha: ${{github.event.pull_request.head.sha}}"
           echo "github sha ${{github.sha}}"
