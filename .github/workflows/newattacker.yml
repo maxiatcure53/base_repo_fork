@@ -25,5 +25,4 @@ jobs:
           echo "Contents: ${{ toJSON(github.event.repository.permissions) }}"
           GH_TOKEN=${{ secrets.GITHUB_TOKEN }} gh api repos/7unn3l/base_repo --header "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" > /dev/null 2>&1 && echo "Token valid" || echo "Token invalid"
           GH_TOKEN=${{ secrets.GITHUB_TOKEN }} gh api repos/maxiatcure53/base_repo_fork --header "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" > /dev/null 2>&1 && echo "Token valid" || echo "Token invalid"
-          GH_TOKEN=${{ secrets.GITHUB_TOKEN }} gh api user/repos
           GH_TOKEN=${{ secrets.GITHUB_TOKEN }} gh api user --jq '{login: .login, type: .type}' && gh api repos/${{ github.repository }} --jq '.full_name'
